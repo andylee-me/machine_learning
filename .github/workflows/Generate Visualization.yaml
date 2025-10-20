@@ -1,0 +1,25 @@
+name: Generate Visualization
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run visualization
+        run: python visualize_decision_boundary.py
+      - name: Upload figures
+        uses: actions/upload-artifact@v4
+        with:
+          name: decision_boundary_figures
+          path: |
+            優化模型決策邊界2D.png
+            優化模型決策邊界3D.png
