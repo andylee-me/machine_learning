@@ -2,25 +2,27 @@ name: Generate Visualization
 
 on:
   workflow_dispatch:
-  
 
-
+# ✅ 全域環境變數（一定要在 jobs 之前）
 env:
   ACTIONS_RUNNER_DEBUG: true
   ACTIONS_STEP_DEBUG: true
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+
       - name: Install dependencies
         run: pip install -r requirements.txt
+
       - name: Run visualization
         working-directory: ./file
         run: python main.py
