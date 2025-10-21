@@ -2,6 +2,17 @@
 優化模型決策邊界視覺化
 展示準確率81%+的模型的決策邊界
 """
+import threading, time, sys
+
+def keep_alive():
+    while True:
+        print("💡 Still running... flushing output.")
+        sys.stdout.flush()
+        time.sleep(60)  # 每分鐘輸出一次
+
+threading.Thread(target=keep_alive, daemon=True).start()
+
+
 
 import pandas as pd
 import numpy as np
