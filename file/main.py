@@ -286,7 +286,7 @@ for idx, (name, clf, color) in enumerate(zip(method_names, classifiers.values(),
     plot_2d(ax, X_top2, y_balanced, clf, f'{name}\n前2重要特徵', f1_name, f2_name)
 
 fig_a.suptitle('優化模型決策邊界視覺化 (2D) - 準確率81%+', fontsize=22, fontweight='bold', y=0.995)
-plt.savefig('優化模型決策邊界2D.png', dpi=300, bbox_inches='tight', facecolor='white')
+plt.savefig('優化模型決策邊界2D.png', dpi=150, bbox_inches='tight', facecolor='white')
 plt.close()
 
 # ============================================================================
@@ -317,7 +317,7 @@ for idx, (name, clf) in enumerate(zip(method_names, classifiers.values())):
     plot_3d(ax, X_top3, y_balanced, clf, f'{name}\n前3特徵', f1, f2, f3)
 
 fig_b.suptitle('優化模型決策邊界視覺化 (3D) - 準確率81%+', fontsize=22, fontweight='bold', y=0.995)
-plt.savefig('優化模型決策邊界3D.png', dpi=300, bbox_inches='tight', facecolor='white')
+plt.savefig('優化模型決策邊界3D.png', dpi=150, bbox_inches='tight', facecolor='white')
 plt.close()
 
 print("\n" + "="*100)
