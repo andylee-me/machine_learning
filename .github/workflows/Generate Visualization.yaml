@@ -1,5 +1,9 @@
 name: Generate Visualization
 
+env:
+  ACTIONS_RUNNER_DEBUG: true
+  ACTIONS_STEP_DEBUG: true
+
 on:
   workflow_dispatch:
   
