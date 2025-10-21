@@ -249,7 +249,7 @@ def plot_3d(ax, X_3d, y, clf, title, xlabel='X', ylabel='Y', zlabel='Z'):
 print("\n【生成視覺化】")
 print("✓ 圖A: 2D決策邊界...")
 
-fig_a = plt.figure(figsize=(24, 18))
+fig_a = plt.figure(figsize=(12, 9))
 gs_a = fig_a.add_gridspec(4, 4, hspace=0.4, wspace=0.35)
 
 # 第一行：PCA降維 - 4種模型
